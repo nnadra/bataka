@@ -38,6 +38,7 @@ body {
     text-align: center;
     z-index: 999; /* biar nongol di atas */
 }
+
 .nav {
     position: relative;
     display: flex;
@@ -59,7 +60,19 @@ body {
     margin: 0 15px;
     font-weight: 500;
 }
-
+/* NAV QUIZ */
+.quiz-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--purple-main);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+}
 /* HAMBURGER */
 .hamburger {
     display: none;
@@ -649,6 +662,210 @@ body {
 
 .social-icons img:hover {
     transform: scale(1.1);
+}
+
+
+
+/* QUIZ SECTION */
+.navbar-quiz {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 12px 20px;
+}
+
+/* Buttons */
+.nav-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #a52a2a; /* merah coklat */
+}
+
+/* Title */
+.nav-title {
+    font-family: 'Cinzel Decorative', serif; 
+    font-size: 26px;
+    font-weight: bold;
+    color: #a52a2a;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Tanda seru kuning */
+.exclaim {
+    color: #f4b400; /* kuning */
+    font-weight: bold;
+    margin: 0 6px;
+}
+
+/* Import font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+
+
+/* === Navbar === */
+.navbar-quiz {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 12px 20px;
+}
+
+/* Tombol panah */
+.nav-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #a52a2a; /* merah coklat */
+}
+
+/* Judul */
+.nav-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: #a52a2a;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Tanda seru kuning */
+.exclaim {
+    color: #f4b400;
+    font-weight: bold;
+    margin: 0 6px;
+}
+
+
+/* QUIZ SECTION */
+.body-quiz::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("assets/vector-aksara.png"), url("assets/vector-aksara2.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+    background-size: 200px, 200px;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+.quiz-container {
+    text-align: center;
+}
+
+.question-container{
+    background-color: white;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Pertanyaan */
+#question {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+/* Gambar aksara */
+#quiz-image {
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 120px;
+}
+
+/* Answer Buttons */
+.answers {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.answer-option {
+    background-color: #a52a2a;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.2s;
+}
+
+.answer-option.selected {
+    background-color: #f5a623;
+    color: black;
+}
+
+/* Send Button */
+.send-btn {
+    background-color: #f5a623;
+    border: 2px solid #a52a2a;
+    color: #a52a2a;
+    padding: 10px 30px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.send-btn:hover {
+    background-color: #e59620;
+}
+
+.notif-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 3px solid #a52a2a;
+    padding: 20px 30px;
+    border-radius: 12px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.notif-box p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.notif-box.correct {
+    border-color: green;
+    color: green;
+}
+
+.notif-box.wrong {
+    border-color: red;
+    color: red;
+}
+
+.notif-box.hidden {
+    display: none;
+}
+
+#notif-close {
+    background-color: #f5a623;
+    border: none;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 
