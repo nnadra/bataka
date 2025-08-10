@@ -11,131 +11,61 @@
   <!-- NAVBAR -->
   <header class="navbar">
     <button class="back-btn" onclick="history.back()">&#10094;</button>
-    <h1 class="navbar-title" id="pageTitle">Detail Bacaan</h1>
+    <h1 class="navbar-title">Detail Bacaan</h1>
   </header>
 
   <!-- MAIN CONTENT -->
   <main class="blog-detail">
-    <h1 class="blog-title" style="text-align: center;" id="storyTitle"></h1>
-    <p class="blog-date" style="text-align: center;">10 Agustus, 2025 | Penulis: Admin Dongeng Nusantara</p>
+    <h1 class="blog-title" style="text-align: center;">Sejarah dan Keunikan Aksara Batak</h1>
+    <p class="blog-date" style="text-align: center;">10 Agustus, 2025 | Penulis: Aca nadra</p>
 
     <div class="cover-book">
-      <img id="storyImage" src="" alt="Cover Story">
+      <img src="assets/story/timun-mas.png" alt="Aksara Batak">
     </div>
 
-    <div id="storyContent"></div>
+    <p>Di sebuah desa, hiduplah seorang janda tua bernama Mbok Rondo. Ia sangat ingin memiliki anak, 
+    namun usianya sudah lanjut. Suatu hari, datanglah seorang raksasa yang menawarkan bantuan. 
+    Sang raksasa memberikan biji mentimun dan berkata bahwa nanti ia akan mengambil anak yang lahir 
+    dari timun itu.</p>
+
+    <p>Beberapa bulan kemudian, timun tersebut tumbuh besar. Saat dibelah, keluarlah seorang bayi cantik 
+    yang diberi nama Timun Mas. Timun Mas tumbuh menjadi gadis yang baik hati. Namun, raksasa mulai 
+    menagih janjinya.</p>
+
+    <p>Mbok Rondo merasa takut dan berdoa kepada dewa. Dewa memberinya empat benda ajaib: biji mentimun, 
+    jarum, garam, dan terasi. Ketika raksasa mengejar, Timun Mas melemparkan benda-benda itu satu per satu. 
+    Biji mentimun berubah menjadi hutan lebat, jarum menjadi bambu runcing, garam menjadi lautan, dan terasi 
+    menjadi lumpur panas.</p>
+
+    <p>Akhirnya, raksasa tenggelam dalam lumpur panas dan tak pernah kembali. Timun Mas pun hidup bahagia 
+    bersama ibunya.</p>
+
+    <div class="blog-image">
+      <img src="https://newnaratif.com/wp-content/uploads/2023/03/FF_KisahTimunMas_JesnCin.png" alt="Contoh Aksara Batak">
+    </div>
+
+    <p class="blog-text">
+      Aksara Batak terdiri dari deretan huruf konsonan dasar yang dapat dimodifikasi dengan tanda diakritik untuk
+      menandai vokal. Tidak seperti aksara Latin, aksara Batak ditulis tanpa spasi antar kata. Hal ini membuatnya
+      memerlukan keterampilan khusus untuk membaca dan menulisnya dengan benar.
+    </p>
+
+    <p class="blog-text">
+      Saat ini, penggunaan aksara Batak telah menurun karena dominasi aksara Latin, namun upaya pelestarian terus
+      dilakukan. Pemerintah daerah, komunitas budaya, dan para peneliti bekerja sama mengajarkan aksara ini di sekolah,
+      mengadakan lomba menulis, serta memanfaatkannya dalam desain modern seperti logo, papan nama, dan seni grafis.
+    </p>
+
+    <div class="highlight-box">
+         <p><strong>Pesan moral:</strong> Kecerdikan dan keberanian dapat mengalahkan kekuatan yang besar.</p>
+    </div>
+
+    <p class="blog-text">Sejak saat itu, Timun Mas dan Mbok Rondo hidup dengan penuh rasa syukur. Mereka membantu penduduk desa 
+    yang membutuhkan, dan kisah keberanian Timun Mas diceritakan turun-temurun agar generasi berikutnya 
+    selalu ingat bahwa kebaikan hati dan kecerdikan adalah kekuatan sejati.</p>
 
     <a href="#" class="btn-kembali" onclick="history.back()">Kembali</a>
   </main>
-
-  <script>
-    // Data cerita lengkap
-    const stories = {
-      "timun-mas": {
-        title: "Timun Mas",
-        image: "assets/story/timun-mas.png",
-        content: `
-          <p class="blog-text">
-            Dahulu kala di sebuah desa di Jawa Tengah, hiduplah seorang janda tua bernama Mbok Srini.
-            Ia sangat ingin memiliki anak. Suatu hari, ia didatangi raksasa yang memberinya biji timun.
-            Raksasa itu berkata, “Tanamlah biji ini, nanti akan lahir seorang anak. Tapi ketika dia berusia 17 tahun, kau harus menyerahkannya padaku.”
-          </p>
-          <p class="blog-text">
-            Mbok Srini menanam biji itu dan lahirlah seorang bayi perempuan cantik yang diberi nama Timun Mas.
-            Timun Mas tumbuh menjadi gadis baik hati. Namun, saat usianya mendekati 17 tahun, raksasa datang menagih janji.
-          </p>
-          <p class="blog-text">
-            Dengan bantuan seorang pertapa, Timun Mas mendapatkan empat benda ajaib: biji mentimun, jarum, garam, dan terasi.
-            Saat raksasa mengejarnya, Timun Mas melempar biji mentimun yang berubah menjadi hutan mentimun berduri.
-            Lalu ia melempar jarum yang menjadi hutan bambu tajam, garam yang menjadi laut, dan terasi yang menjadi lautan lumpur panas.
-          </p>
-          <div class="highlight-box">
-            <h2>Raksasa itu akhirnya tenggelam dalam lumpur panas, dan Timun Mas pun hidup bahagia bersama ibunya.</h2>
-          </div>
-        `
-      },
-      "pohon-kacang": {
-        title: "Pohon Kacang Ajaib",
-        image: "assets/story/bean.png",
-        content: `
-          <p class="blog-text">
-            Jack adalah anak miskin yang tinggal bersama ibunya. Suatu hari, ibunya menyuruhnya menjual sapi mereka.
-            Dalam perjalanan, Jack bertemu seorang pria misterius yang menukar sapi dengan beberapa biji kacang ajaib.
-          </p>
-          <p class="blog-text">
-            Ibunya marah dan membuang kacang itu ke luar jendela. Keesokan paginya, tumbuhlah pohon kacang raksasa yang menjulang ke langit.
-            Jack memanjatnya dan menemukan istana raksasa di atas awan.
-          </p>
-          <p class="blog-text">
-            Di dalam istana, Jack menemukan harta, ayam yang bertelur emas, dan kecapi ajaib. Ia mengambilnya, tapi raksasa menyadarinya dan mengejar Jack.
-          </p>
-          <div class="highlight-box">
-            <h2>Jack berhasil turun dan menebang pohon kacang itu, membuat raksasa terjatuh dan meninggal.</h2>
-          </div>
-        `
-      },
-      "hansel-gretel": {
-        title: "Hansel dan Gretel",
-        image: "assets/story/hansel.png",
-        content: `
-          <p class="blog-text">
-            Hansel dan Gretel adalah dua bersaudara miskin yang dibuang ke hutan oleh orang tua tiri mereka.
-            Mereka tersesat dan menemukan rumah yang seluruhnya terbuat dari permen dan kue.
-          </p>
-          <p class="blog-text">
-            Pemilik rumah itu adalah penyihir jahat yang berniat memakan mereka.
-            Gretel berhasil menipu penyihir agar masuk ke dalam oven, lalu menutup pintunya.
-          </p>
-          <div class="highlight-box">
-            <h2>Hansel dan Gretel pun selamat, membawa pulang harta penyihir, dan hidup bahagia.</h2>
-          </div>
-        `
-      },
-      "rubah-anggur": {
-        title: "Rubah dan Anggur",
-        image: "assets/story/fox.png",
-        content: `
-          <p class="blog-text">
-            Seekor rubah lapar melihat buah anggur yang menggantung di pohon.
-            Ia mencoba melompat berkali-kali, tapi tetap tidak bisa meraihnya.
-          </p>
-          <div class="highlight-box">
-            <h2>Akhirnya rubah pergi sambil berkata, “Ah, pasti anggur itu asam.”</h2>
-          </div>
-        `
-      },
-      "tiga-babi": {
-        title: "Tiga Babi Kecil",
-        image: "assets/story/pigs.png",
-        content: `
-          <p class="blog-text">
-            Tiga babi kecil membangun rumah masing-masing dari jerami, kayu, dan batu bata.
-            Seekor serigala jahat mencoba meniup rumah mereka.
-          </p>
-          <p class="blog-text">
-            Rumah jerami dan kayu hancur, tapi rumah batu bata tetap kokoh.
-          </p>
-          <div class="highlight-box">
-            <h2>Serigala akhirnya menyerah, dan ketiga babi pun hidup aman dan damai.</h2>
-          </div>
-        `
-      }
-    };
-
-    // Ambil parameter story dari URL
-    const params = new URLSearchParams(window.location.search);
-    const storyKey = params.get("story");
-
-    if (stories[storyKey]) {
-      document.getElementById("pageTitle").textContent = stories[storyKey].title;
-      document.getElementById("storyTitle").textContent = stories[storyKey].title;
-      document.getElementById("storyImage").src = stories[storyKey].image;
-      document.getElementById("storyContent").innerHTML = stories[storyKey].content;
-    } else {
-      document.getElementById("storyTitle").textContent = "Cerita tidak ditemukan";
-      document.getElementById("storyContent").innerHTML = `<p class="blog-text">Cerita ini belum tersedia.</p>`;
-    }
-  </script>
 
 </body>
 </html>
