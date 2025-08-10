@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | Bataka Web</title>
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+<!-- Notification Box -->
+<div id="notification" class="notif-box hidden">
+    <img id="notif-icon" class="notif-icon" src="" alt="icon">
+    <p id="notif-message"></p>
+    <button id="notif-close"></button>
+</div>
+
+
+<body class="body-quiz">
+
+    <!-- Navbar -->
+    <nav class="navbar-quiz">
+        <button id="btn-back" class="nav-btn">&#10094;</button>
+        <h1 class="nav-title"> Play the Quiz </h1>
+        <button id="btn-next" class="nav-btn">&#10095;</button>
+    </nav>
+
+    <!-- Quiz Container -->
+    <div class="quiz-container">
+        <div class="question-container">
+        <h1 id="question"></h1>
+        <img id="quiz-image" src="" alt="aksara batak">
+        </div>
+
+        <!-- Answer Options --> 
+        <div id="answer-options" class="answers"></div>
+
+        <!-- Send Button -->
+        <button id="sendBtn" class="send-btn">Send</button>
+    </div>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>

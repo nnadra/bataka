@@ -1,0 +1,247 @@
+/* QUIZ SECTION */
+@font-face {
+    font-family: 'Sacred Bridge';
+    src: url('../assets/font/sacred_bridge/Sacred Bridge Demo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --font-primary: 'DM Sans', sans-serif;
+    --font-secondary: 'Sacred Bridge', serif;
+
+    --primary-color: #1b1b1b;
+    --white-color: #ffffff;
+    --bg-color: #FBF1E7;
+    --red-color: #a92620;
+    --yellow-color: #fec538;
+}
+
+.body-quiz{
+    background-color: var(--bg-color);
+}
+
+.navbar-quiz {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-color);
+    padding: 12px 20px;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #a52a2a; 
+}
+.nav-title {
+    font-family: var(--font-secondary);
+    font-size: 42px;
+    font-weight: bold;
+    color: #a52a2a;
+    padding: 25px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.body-quiz::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("assets/quiz/aksara-batak-u.png"), url("assets/vector-aksara2.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+    background-size: 800px, 200px;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+.quiz-container {
+    text-align: center;
+}
+
+.question-container{
+    background-color: var(--white-color);
+    font-family: var(--font-primary);
+    border-radius: 20px;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Pertanyaan */
+#question {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+/* Gambar aksara */
+#quiz-image {
+    display: block;
+    margin: 0 auto 30px auto;
+    max-width: 250px;
+}
+
+/* Answer Buttons */
+.answers {
+    display: grid;
+    font-family: var(--font-primary);
+    grid-template-columns: repeat(5, auto);
+    gap: 16px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.answer-option {
+    background-color: #a52a2a;
+    color: white;
+    padding: 20px 50px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.2s;
+}
+
+.answer-option.selected {
+    background-color: #f5a623;
+    color: black;
+}
+
+/* Send Button */
+.send-btn {
+    background-color: #f5a623;
+    border: 2px solid #a52a2a;
+    color: #a52a2a;
+    padding: 18px 40px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.send-btn:hover {
+    background-color: #e59620;
+}
+
+.notif-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 3px solid #a52a2a;
+    padding: 20px 20px;
+    border-radius: 12px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    width: 280px;           /* fix lebar */
+    min-height: 200px;      /* fix tinggi minimal */
+    box-sizing: border-box; /* biar padding nggak ngubah ukuran total */
+}
+
+.notif-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 12px;
+}
+
+.notif-box p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: var(--font-primary); /* konsisten font */
+}
+
+.notif-box.correct {
+    background-color: #E8F9F1;
+    border-color: #17B81D;
+    color: #17B81D;
+}
+
+.notif-box.wrong {
+    background-color: #FFF2F2;
+    border-color: #FF4045;
+    color: #EE3035;
+}
+
+.notif-box.warning {
+    background-color: #FFF7E0;
+    border-color: #FFBD1A;
+    color: #FFBD1A;
+}
+
+.notif-box.hidden {
+    display: none;
+}
+
+#notif-close {
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: var(--font-primary);
+}
+
+/* Warna tombol sesuai status */
+.notif-box.correct #notif-close {
+    background-color: #17B81D;
+    color: white;
+}
+
+.notif-box.wrong #notif-close {
+    background-color: #FF4045;
+    color: white;
+}
+
+.notif-box.warning #notif-close {
+    background-color: #FFBD1A;
+    color: white;
+}
+
+
+
+.result-screen {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.result-screen h2 {
+    font-size: 24px;
+    color: #a52a2a;
+    margin-bottom: 15px;
+}
+
+.result-screen p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.result-screen button {
+    background-color: #f5a623;
+    border: 2px solid #a52a2a;
+    color: #a52a2a;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.2s;
+}
+
+.result-screen button:hover {
+    background-color: #e59620;
+}
+
