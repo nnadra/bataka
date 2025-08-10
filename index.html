@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bataka</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/ragambaca.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet" />
+
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <!-- SwiperJS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/landing/logo-bataka.png" type="image/x-icon">
+</head>
+
+<body>
+  <nav class="bataka-navbar">
+    <div class="bataka-nav">
+      <div>
+        <a href="#">Tentang kami</a>
+        <a href="#">Aksara Batak</a>
+      </div>
+      <div>
+        <img src="assets/landing/bataka-logo.png" alt="bataka-logo">
+      </div>
+      <div>
+        <a href="#">Ragambaca</a>
+        <a href="#">Quiz</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hamburger" id="hamburger">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+
+  <div class="sidebar" id="sidebar">
+    <a href="#">Tentang</a>
+    <a href="#">Aksara Batak</a>
+    <a href="#">Ragambaca</a>
+    <a href="#">Quiz</a>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <img src="assets/landing/daun.png" class="daun">
+    <img src="assets/landing/burung.svg" class="burung">
+    <img src="assets/landing/rumah batak kiri.svg" class="rumah-kiri">
+    <img src="assets/landing/rumah batak kanan.svg" class="rumah-kanan">
+    <img src="assets/landing/batak-aksara.svg" class="title" alt="BATAK AKSARA">
+    <button class="btn-hero">See More</button>
+    <img src="assets/landing/gelombang.png" class="bawah-section">
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about">
+    <div class="about-images">
+      <div>
+        <img src="assets/img2-bataka.png" alt="" class="img2">
+        <img src="assets/img3-bataka.png" alt="" class="img3">
+      </div>
+
+      <div>
+        <img src="assets/img1-bataka.png" alt="" class="img1">
+      </div>
+    </div>
+    <div class="about-text">
+      <h2>Selami Jejak Leluhur Lewat Aksara</h2>
+      <p>
+        Bataka hadir untuk menghidupkan kembali aksara Batak—simbol warisan yang penuh makna. Setiap goresan
+        huruf menyimpan cerita. Di sini, belajar nulis dan baca aksara Batak jadi seru dan gak ngebosenin.
+      </p><br>
+      <p>
+        Mulai dari sejarahnya, bentuk hurufnya, sampai cara nulis nama kamu pake aksara Batak, semuanya bisa
+        kamu explore!
+      </p>
+    </div>
+  </section>
+
+  <!-- RAGAMBACA SECTION -->
+  <section>
+    <div class="marquee-container">
+      <marquee class="blink"> BELAJAR • AKSARA • BATAK • BERSAMA • BATAKA • BELAJAR • AKSARA • BATAK • BERSAMA •
+        BATAKA • BELAJAR • AKSARA • BATAK • BERSAMA • BATAKA • BELAJAR •</marquee>
+    </div>
+    <h1 class="judul-bacaan">Pilih Bacaanmu</h1>
+    <!-- CARD -->
+    <div class="carousel-container">
+      <div class="carousel-inner" id="bookSlider">
+        <!-- buku 1 -->
+        <div class="book-div" onclick="openBookModal('Timun Mas', 'assets/story/timun-mas.png')">
+          <div class="book-card">
+            <img src="assets/story/timun-mas.png" alt="timun mas">
+          </div>
+          <h5 class="fw-bold mb-0 mt-3 w-100 text-center">Timun Mas</h5>
+        </div>
+        <!-- buku 2 -->
+        <div class="book-div" onclick="openBookModal('Pohon Kacang Ajaib', 'assets/story/bean.png')">
+          <div class="book-card">
+            <img src="assets/story/bean.png" alt="bean">
+          </div>
+          <h5 class="fw-bold mb-0 mt-3 w-100 text-center">Pohon Kacang Ajaib</h5>
+        </div>
+        <!-- buku 3 -->
+        <div class="book-div" onclick="openBookModal('Hansel dan Gretel', 'assets/story/hansel.png')">
+          <div class="book-card">
+            <img src="assets/story/hansel.png" alt="hansel">
+          </div>
+          <h5 class="fw-bold mb-0 mt-3 w-100 text-center">Hansel dan Gretel</h5>
+        </div>
+        <!-- buku 4 -->
+        <div class="book-div" onclick="openBookModal('Rubah dan Angggur', 'assets/story/fox.png')">
+          <div class="book-card">
+            <img src="assets/story/fox.png" alt="bean">
+          </div>
+          <h5 class="fw-bold mb-0 mt-3 w-100 text-center">Rubah dan Angggur</h5>
+        </div>
+        <!-- buku 5(lainnnya) -->
+        <div class="book-div" onclick="openBookModal('3 Babi Kecil', 'assets/story/pigs.png')">
+          <div class="book-card">
+            <img src="assets/story/pigs.png" alt="bean">
+          </div>
+          <h5 class="fw-bold mb-0 mt-3 w-100 text-center">3 Babi Kecil</h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- Explore More -->
+    <button id="sliderBtn" class="arrow-btn">&#10148;</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="bookModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content p-4">
+          <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="modal-body text-start">
+            <img id="modalImage" src="" alt="Book Cover" class="modal-img mb-3">
+            <h5 class="fw-bold text-center" id="modalTitle">Judul Buku</h5>
+            <p class="text-muted text-center">Nasya Dz</p>
+
+            <div class="d-flex align-items-center text-center gap-3 w-100 mb-3">
+              <a href="detail.html" class="btn-baca flex-grow-1">Baca Sekarang!</a>
+              <i class='bx bx-heart like-icon' onclick="toggleLike(this)"></i>
+            </div>
+
+            <p class="mb-3 text-start">
+              ᯂ᯲ᯀᯂ᯲ ᯅᯖ ᯂ᯲ <br>
+              ᯂ᯲ᯖᯉ ᯔᯬᯒ ᯖᯅᯒᯉ᯲ ᯂ᯲ᯂ᯲ <br>
+              ᯖᯮᯞᯂ᯲ ᯂ᯲
+            </p>
+            <hr>
+            <p class="text-muted"><strong>Tingkat kesulitan baca:</strong> Sedang</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- QUIZ SECTION -->
+
+  <!-- BLOG SECTION -->
+
+  <!-- FEEDBACK SECTION -->
+  <!-- FEEDBACK SECTION -->
+  <section class="feedback">
+    <div class="container text-center mt-5">
+      <h2 class="judul-bacaan text-hero-bold">
+        <span class="highlight">Remarkable Experiences</span>
+      </h2>
+    </div>
+
+    <!-- FEEDBACK -->
+    <div class="container mt-5">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+          <!-- Card 1 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="avatar">
+                <img src="https://i.ibb.co/yNQ3Vtc/avatar1.png" alt="Avatar 1" />
+              </div>
+              <div class="testimonial-text">
+                <div class="name">Jertiadi Cakra P. N.</div>
+                <div class="tags">
+                  <span>SMA 1 Surabaya</span>
+                  <span>MEXT Scholarship</span>
+                </div>
+                <p>Never thought that I will really get scholarship. I always confused before but ScoHunt appear and
+                  give us a detail information. Thank you for exist, ScoHunt ❤️</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="avatar">
+                <img src="https://i.ibb.co/1vY7Jvj/avatar2.png" alt="Avatar 2" />
+              </div>
+              <div class="testimonial-text">
+                <div class="name">Sadam Permana Wijaya</div>
+                <div class="tags">
+                  <span>Padjadjaran University</span>
+                  <span>DAAD Scholarship</span>
+                </div>
+                <p>I can't believe how lucky I am to have discovered this app. It's like a treasure chest of
+                  opportunities. Your commitment to accessible education is commendable, and it's changing lives.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="avatar">
+                <img src="https://i.ibb.co/yNQ3Vtc/avatar1.png" alt="Avatar 3" />
+              </div>
+              <div class="testimonial-text">
+                <div class="name">Maya Putri</div>
+                <div class="tags">
+                  <span>UI</span>
+                  <span>Chevening</span>
+                </div>
+                <p>This platform changed my life. Super complete, super helpful, and super amazing. Thank you ScoHunt
+                  team!</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- Navigation Arrows -->
+        <div class="swiper-button-prev custom-swiper-button">
+          <i class='bx bxs-chevron-left'></i>
+        </div>
+        <div class="swiper-button-next custom-swiper-button">
+          <i class='bx bxs-chevron-right'></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- REQUEST SECTION -->
+  <section>
+    <div class="req-story-section">
+      <div class="request-story">
+        <h2>KAMU MAU REQUEST CERITA? AI DOPE!</h2>
+        <div class="text-input">
+          <input type="text" placeholder="Tulis request kamu di sini..." />
+          <button class="send" type="submit">Send</button>
+        </div>
+      </div>
+      <img src="assets/landing/overlay-request.png" alt="overlay-request" />
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <img src="assets/landing/bataka-logo.png" alt="Bataka Logo" class="footer-logo">
+      <h3>BATAKA</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod sapien vel vehicula viverra.</p>
+      <p>lorem ipsum</p>
+    </div>
+
+    <div class="footer-right">
+      <div class="footer-col">
+        <h2>Home</h2>
+        <p>Home</p>
+        <p>About</p>
+        <p>Feature</p>
+        <p>Game</p>
+      </div>
+
+      <div class="footer-col">
+        <h2>Home</h2>
+        <p>Home</p>
+        <p>About</p>
+        <p>Feature</p>
+        <p>Game</p>
+      </div>
+
+      <div class="footer-col">
+        <h2>Home</h2>
+        <p>Home</p>
+        <p>About</p>
+        <p>Feature</p>
+        <p>Game</p>
+      </div>
+
+      <div class="footer-col social">
+        <h2>Media Social</h2>
+        <div class="social-icons">
+          <img src="assets/ig-icon.png" alt="Instagram">
+          <img src="assets/fb-icon.png" alt="Facebook">
+          <img src="assets/fb-icon.png" alt="Facebook">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Js -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 1.1, // sedikit keluar kanan
+        },
+        992: {
+          slidesPerView: 2, // tampil 2 kartu
+          spaceBetween: 24,
+        },
+        1200: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        }
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>
