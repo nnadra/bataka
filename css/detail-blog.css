@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f5f1;
+  color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  z-index: 10;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #c0392b;
+  margin-right: 15px;
+}
+
+.navbar-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* MAIN CONTENT */
+.blog-detail {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.blog-title {
+  font-size: 28px;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.blog-date {
+  color: #c75d4b;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.cover-book{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.blog-image img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.blog-text {
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* BOX TENGAH */
+.highlight-box {
+  background-color: #e6effd;
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+  margin: 30px 0;
+}
+
+.highlight-box h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* BUTTON */
+.btn-kembali {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #c0392b;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.btn-kembali:hover {
+  background-color: #e74c3c;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .blog-title {
+    font-size: 22px;
+  }
+
+  .highlight-box {
+    padding: 20px;
+  }
+
+  .highlight-box h2 {
+    font-size: 18px;
+  }
+
+  .btn-kembali {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
