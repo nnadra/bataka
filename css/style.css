@@ -325,7 +325,7 @@ body {
 /* BLOG SECTION */
 .blog-section {
     padding: 80px 8%;
-    background-color: #fff;
+    background-color: var(--white-color)
 }
 
 .blog-header {
@@ -336,16 +336,16 @@ body {
 .blog-header h1 {
     font-size: 38px;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--primary-color);
 }
 
 .blog-header span {
-    color: #4b6b2b;
+    color: var(--red-color);
 }
 
 .blog-header p {
     font-size: 18px;
-    color: #666;
+    color: var(--primary-color);
 }
 
 .blog-cards {
@@ -523,7 +523,6 @@ body {
 }
 
 /* FEEDBACK */
-/* Tetap pakai animasi highlight */
 .text-hero-bold {
     animation: bounce 2s infinite;
 }
