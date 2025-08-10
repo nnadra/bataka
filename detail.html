@@ -11,57 +11,131 @@
   <!-- NAVBAR -->
   <header class="navbar">
     <button class="back-btn" onclick="history.back()">&#10094;</button>
-    <h1 class="navbar-title">Detail Bacaan</h1>
+    <h1 class="navbar-title" id="pageTitle">Detail Bacaan</h1>
   </header>
 
   <!-- MAIN CONTENT -->
   <main class="blog-detail">
-    <h1 class="blog-title" style="text-align: center;">Legenda Danau Toba</h1>
+    <h1 class="blog-title" style="text-align: center;" id="storyTitle"></h1>
     <p class="blog-date" style="text-align: center;">10 Agustus, 2025 | Penulis: Admin Dongeng Nusantara</p>
 
     <div class="cover-book">
-      <img src="assets/story/danau-toba.jpg" alt="Legenda Danau Toba">
+      <img id="storyImage" src="" alt="Cover Story">
     </div>
 
-    <p class="blog-text">
-      Dahulu kala, di sebuah lembah yang subur di Sumatera Utara, hiduplah seorang pemuda bernama Toba.
-      Ia bekerja sebagai petani dan nelayan untuk memenuhi kebutuhannya sehari-hari. Suatu hari, Toba
-      memancing di sungai dan berhasil menangkap seekor ikan mas yang sangat cantik.
-    </p>
-
-    <p class="blog-text">
-      Betapa terkejutnya Toba ketika ikan itu tiba-tiba berbicara dan berubah menjadi seorang wanita cantik.
-      Wanita itu mengaku dikutuk menjadi ikan dan akan kembali menjadi manusia jika ada yang mau menikahinya.
-      Toba pun jatuh cinta dan menikah dengannya, dengan satu syarat: ia tidak boleh mengungkit asal-usul sang istri.
-    </p>
-
-    <div class="blog-image">
-      <img src="assets/story/istri-toba.jpg" alt="Istri Toba">
-    </div>
-
-    <p class="blog-text">
-      Mereka hidup bahagia dan dikaruniai seorang anak laki-laki bernama Samosir.
-      Namun Samosir tumbuh menjadi anak yang nakal dan sering membuat ayahnya kesal.
-      Suatu hari, saat Samosir membawa makan siang untuk ayahnya di ladang, ia memakan sebagian besar makanan tersebut.
-    </p>
-
-    <p class="blog-text">
-      Toba yang marah akhirnya tanpa sadar melanggar janjinya dan berkata, “Dasar anak ikan!”
-      Seketika langit mendung, petir menyambar, dan air dari sungai meluap besar hingga menenggelamkan desa.
-      Ibu Samosir kembali menjadi ikan dan menghilang di dalam air.
-    </p>
-
-    <div class="highlight-box">
-      <h2>Air yang meluap itu kemudian membentuk Danau Toba,<br>sedangkan pulau di tengahnya diberi nama Pulau Samosir.</h2>
-    </div>
-
-    <p class="blog-text">
-      Hingga kini, Danau Toba menjadi salah satu danau terbesar di dunia dan menjadi kebanggaan masyarakat Batak.
-      Legenda ini menjadi pengingat tentang janji yang diingkari dan pentingnya menghormati sesama.
-    </p>
+    <div id="storyContent"></div>
 
     <a href="#" class="btn-kembali" onclick="history.back()">Kembali</a>
   </main>
+
+  <script>
+    // Data cerita lengkap
+    const stories = {
+      "timun-mas": {
+        title: "Timun Mas",
+        image: "assets/story/timun-mas.png",
+        content: `
+          <p class="blog-text">
+            Dahulu kala di sebuah desa di Jawa Tengah, hiduplah seorang janda tua bernama Mbok Srini.
+            Ia sangat ingin memiliki anak. Suatu hari, ia didatangi raksasa yang memberinya biji timun.
+            Raksasa itu berkata, “Tanamlah biji ini, nanti akan lahir seorang anak. Tapi ketika dia berusia 17 tahun, kau harus menyerahkannya padaku.”
+          </p>
+          <p class="blog-text">
+            Mbok Srini menanam biji itu dan lahirlah seorang bayi perempuan cantik yang diberi nama Timun Mas.
+            Timun Mas tumbuh menjadi gadis baik hati. Namun, saat usianya mendekati 17 tahun, raksasa datang menagih janji.
+          </p>
+          <p class="blog-text">
+            Dengan bantuan seorang pertapa, Timun Mas mendapatkan empat benda ajaib: biji mentimun, jarum, garam, dan terasi.
+            Saat raksasa mengejarnya, Timun Mas melempar biji mentimun yang berubah menjadi hutan mentimun berduri.
+            Lalu ia melempar jarum yang menjadi hutan bambu tajam, garam yang menjadi laut, dan terasi yang menjadi lautan lumpur panas.
+          </p>
+          <div class="highlight-box">
+            <h2>Raksasa itu akhirnya tenggelam dalam lumpur panas, dan Timun Mas pun hidup bahagia bersama ibunya.</h2>
+          </div>
+        `
+      },
+      "pohon-kacang": {
+        title: "Pohon Kacang Ajaib",
+        image: "assets/story/bean.png",
+        content: `
+          <p class="blog-text">
+            Jack adalah anak miskin yang tinggal bersama ibunya. Suatu hari, ibunya menyuruhnya menjual sapi mereka.
+            Dalam perjalanan, Jack bertemu seorang pria misterius yang menukar sapi dengan beberapa biji kacang ajaib.
+          </p>
+          <p class="blog-text">
+            Ibunya marah dan membuang kacang itu ke luar jendela. Keesokan paginya, tumbuhlah pohon kacang raksasa yang menjulang ke langit.
+            Jack memanjatnya dan menemukan istana raksasa di atas awan.
+          </p>
+          <p class="blog-text">
+            Di dalam istana, Jack menemukan harta, ayam yang bertelur emas, dan kecapi ajaib. Ia mengambilnya, tapi raksasa menyadarinya dan mengejar Jack.
+          </p>
+          <div class="highlight-box">
+            <h2>Jack berhasil turun dan menebang pohon kacang itu, membuat raksasa terjatuh dan meninggal.</h2>
+          </div>
+        `
+      },
+      "hansel-gretel": {
+        title: "Hansel dan Gretel",
+        image: "assets/story/hansel.png",
+        content: `
+          <p class="blog-text">
+            Hansel dan Gretel adalah dua bersaudara miskin yang dibuang ke hutan oleh orang tua tiri mereka.
+            Mereka tersesat dan menemukan rumah yang seluruhnya terbuat dari permen dan kue.
+          </p>
+          <p class="blog-text">
+            Pemilik rumah itu adalah penyihir jahat yang berniat memakan mereka.
+            Gretel berhasil menipu penyihir agar masuk ke dalam oven, lalu menutup pintunya.
+          </p>
+          <div class="highlight-box">
+            <h2>Hansel dan Gretel pun selamat, membawa pulang harta penyihir, dan hidup bahagia.</h2>
+          </div>
+        `
+      },
+      "rubah-anggur": {
+        title: "Rubah dan Anggur",
+        image: "assets/story/fox.png",
+        content: `
+          <p class="blog-text">
+            Seekor rubah lapar melihat buah anggur yang menggantung di pohon.
+            Ia mencoba melompat berkali-kali, tapi tetap tidak bisa meraihnya.
+          </p>
+          <div class="highlight-box">
+            <h2>Akhirnya rubah pergi sambil berkata, “Ah, pasti anggur itu asam.”</h2>
+          </div>
+        `
+      },
+      "tiga-babi": {
+        title: "Tiga Babi Kecil",
+        image: "assets/story/pigs.png",
+        content: `
+          <p class="blog-text">
+            Tiga babi kecil membangun rumah masing-masing dari jerami, kayu, dan batu bata.
+            Seekor serigala jahat mencoba meniup rumah mereka.
+          </p>
+          <p class="blog-text">
+            Rumah jerami dan kayu hancur, tapi rumah batu bata tetap kokoh.
+          </p>
+          <div class="highlight-box">
+            <h2>Serigala akhirnya menyerah, dan ketiga babi pun hidup aman dan damai.</h2>
+          </div>
+        `
+      }
+    };
+
+    // Ambil parameter story dari URL
+    const params = new URLSearchParams(window.location.search);
+    const storyKey = params.get("story");
+
+    if (stories[storyKey]) {
+      document.getElementById("pageTitle").textContent = stories[storyKey].title;
+      document.getElementById("storyTitle").textContent = stories[storyKey].title;
+      document.getElementById("storyImage").src = stories[storyKey].image;
+      document.getElementById("storyContent").innerHTML = stories[storyKey].content;
+    } else {
+      document.getElementById("storyTitle").textContent = "Cerita tidak ditemukan";
+      document.getElementById("storyContent").innerHTML = `<p class="blog-text">Cerita ini belum tersedia.</p>`;
+    }
+  </script>
 
 </body>
 </html>

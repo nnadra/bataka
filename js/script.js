@@ -111,3 +111,4 @@ slider.addEventListener('mousemove', (e) => {
 });
 
 slider.style.cursor = 'grab';
+
