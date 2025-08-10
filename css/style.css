@@ -275,7 +275,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--purple-main);
+    background-color: var(--red-color);
     border-radius: 30px;
     padding: 40px 60px;
     gap: 40px;
@@ -300,8 +300,8 @@ body {
 }
 
 .btn-quiz {
-    background-color: #fff;
-    color: var(--purple-main);
+    background-color: var(--white-color);
+    color: var(--red-color);
     border: none;
     padding: 14px 36px;
     border-radius: 50px;
@@ -355,7 +355,8 @@ body {
 }
 
 .blog-card {
-    background-color: var(--card-bg, #eee);
+    background-color: var(--white-color);
+    box-shadow: #000;
     border-radius: 12px;
     padding: 20px;
     flex: 1 1 calc(33.333% - 20px);
@@ -363,11 +364,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .blog-img {
-    background-color: var(--card-bg);
     height: 180px;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -402,15 +402,22 @@ body {
 
 /* Animasi Floating */
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-8px);
     }
 }
 
 /* REQUEST STORY SECTION */
+.request {
+    background-color: var(--white-color);
+    padding: 40px 8%;
+}
 .req-story-section {
     background-color: var(--red-color);
     margin: 55px 60px;
@@ -522,191 +529,31 @@ body {
     max-width: 100%;
 }
 
-/* FEEDBACK */
-.text-hero-bold {
-    animation: bounce 2s infinite;
-}
+/* Responsiveness */
+@media (max-width: 768px) {
+  .swiper-wrapper {
+    padding: 0 20px;
+  }
 
-@keyframes bounce {
-
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        transform: translateY(0);
-    }
-
-    40% {
-        transform: translateY(-30px);
-    }
-
-    60% {
-        transform: translateY(-15px);
-    }
-}
-
-.highlight {
-    background-image: linear-gradient(to right, #FFD700, #FFD700);
-    background-size: 70% 0.3em;
-    background-repeat: no-repeat;
-    background-position: 0 85%;
-    transition: background-size 0.3s ease-in-out;
-    animation: highlightAnimation 1s infinite alternate;
-}
-
-@keyframes highlightAnimation {
-    from {
-        background-size: 100% 0.3em;
-    }
-
-    to {
-        background-size: 100% 100%;
-    }
-}
-
-/* Swiper styling */
-.swiper {
-    padding: 2rem 0;
-}
-
-.swiper-slide {
-    height: auto;
-    display: flex;
-}
-
-/* Testimonial Card Styling */
-.testimonial-card {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.5rem;
-    border-radius: 20px;
-    height: 100%;
-    transition: transform 0.3s ease;
-    background: var(--white-color);
-    /* flex: 1; */
-}
-
-/* .testimonial-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.5rem;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  flex: 1;
-  height: 100%;
-} */
-
-/* .testimonial-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.5rem;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  height: 100%;
-} */
-
-.avatar {
-    width: 70px;
-    height: auto;
-    border-radius: 16px;
-    overflow: hidden;
-    flex-shrink: 0;
-    background: #f0f0f0;
-}
-
-.avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.testimonial-text {
-    flex: 1;
-    display: flex;
+  .testimonial-card {
     flex-direction: column;
+    text-align: center;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none; 
+  }
 }
 
-.name {
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 0.3rem;
-    color: var(--red-color);
-}
-
-/* .tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  font-size: 0.75rem;
-  margin-bottom: 0.5rem;
-  color: #666;
-  background-color: var(--yellow-color);
-} */
-
-/* Tag badge */
-.tags span {
-    background: var(--yellow-color);
-    color: var(--white-color);
-    padding: 0.2rem 0.5rem;
-    border-radius: 12px;
-    font-size: 12px;
-}
-
-.testimonial-text p {
-    font-size: 0.95rem;
-    color: var(--primary-color);
-    margin-bottom: 0;
-    margin-top: 8px;
-    flex-grow: 1;
-}
-
-/* Navigasi panah */
-/* Panah navigasi bulat dengan boxicon */
-.custom-swiper-button {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background-color: #FFD700;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 11;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-/* Posisi kiri-kanan */
-.swiper-button-prev {
-    left: -30px;
-}
-
-.swiper-button-next {
-    right: -30px;
-}
-
-/* Ukuran dan ikon */
-.custom-swiper-button i {
-    font-size: 20px;
-}
-
-/* Hilangkan default panah Swiper */
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    display: none;
-}
 
 /* FOOTER SECTION */
-.footer{
+.footer {
     padding: 7rem 9% 2rem;
     min-height: fit-content;
     text-align: center;
@@ -714,22 +561,23 @@ body {
     color: var(--primary-color);
 }
 
-.footer a img{
+.footer a img {
     width: 8vw;
 }
-.footer p{
+
+.footer p {
     padding: 2rem 25%;
     font-size: 1.2rem;
     font-weight: 300;
 }
 
-.nav-footer{
+.nav-footer {
     display: inline-flex;
     justify-content: center;
 }
 
 
-.nav-footer a{
+.nav-footer a {
     padding: 1rem;
     color: var(--primary-color);
     font-size: 1.2rem;
@@ -739,11 +587,11 @@ body {
     text-decoration: none;
 }
 
-.nav-footer a:hover{
+.nav-footer a:hover {
     opacity: 50%;
 }
 
-.sosmed-footer a{
+.sosmed-footer a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -759,7 +607,7 @@ body {
 }
 
 
-.sosmed-footer a:hover{
+.sosmed-footer a:hover {
     color: var(--white-color);
     background: var(--red-color);
 }
@@ -861,6 +709,7 @@ body {
         width: 90%;
         height: auto;
     }
+
     .quiz-banner {
         flex-direction: column;
         padding: 30px 20px;
@@ -890,6 +739,7 @@ body {
     .request-story h2 {
         font-size: 40px;
     }
+
     .req-story-section {
         flex-direction: column;
         text-align: center;
@@ -917,6 +767,7 @@ body {
         text-align: center;
         padding: 30px;
     }
+
     .left-quiz h3 {
         font-size: 18px;
     }
@@ -926,6 +777,7 @@ body {
     .blog-cards {
         flex-direction: column;
     }
+
     .blog-card {
         flex: 1 1 100%;
     }
@@ -935,12 +787,15 @@ body {
     .quiz {
         padding: 40px 5%;
     }
+
     .quiz-banner {
         padding: 20px;
     }
+
     .left-quiz h1 {
         font-size: 28px;
     }
+
     .btn-quiz {
         font-size: 16px;
         padding: 12px 28px;
@@ -954,7 +809,7 @@ body {
     }
 
     .footer a img {
-        width: 100px; 
+        width: 100px;
     }
 
     .footer p {

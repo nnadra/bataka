@@ -28,15 +28,15 @@
   <nav class="bataka-navbar">
     <div class="bataka-nav">
       <div>
-        <a href="#">Tentang kami</a>
+        <a href="#about">Tentang kami</a>
         <a href="#">Aksara Batak</a>
       </div>
       <div>
         <img src="assets/landing/bataka-logo.png" alt="bataka-logo">
       </div>
       <div>
-        <a href="#">Ragambaca</a>
-        <a href="#">Quiz</a>
+        <a href="#ragambaca">Ragambaca</a>
+        <a href="#quiz">Quiz</a>
       </div>
     </div>
   </nav>
@@ -48,10 +48,10 @@
   </div>
 
   <div class="sidebar" id="sidebar">
-    <a href="#">Tentang</a>
+    <a href="#about">Tentang</a>
     <a href="#">Aksara Batak</a>
-    <a href="#">Ragambaca</a>
-    <a href="#">Quiz</a>
+    <a href="#ragambaca">Ragambaca</a>
+    <a href="#quiz">Quiz</a>
   </div>
 
   <!-- HERO SECTION -->
@@ -66,7 +66,7 @@
   </section>
 
   <!-- ABOUT SECTION -->
-  <section class="about">
+  <section class="about" id="about">
     <div class="about-images">
       <div>
         <img src="assets/landing/img1-bataka.png" alt="" class="img2">
@@ -91,7 +91,7 @@
   </section>
 
   <!-- RAGAMBACA SECTION -->
-  <section>
+  <section id="ragambaca">
     <div class="marquee-container">
       <marquee class="blink"> BELAJAR • AKSARA • BATAK • BERSAMA • BATAKA • BELAJAR • AKSARA • BATAK • BERSAMA •
         BATAKA • BELAJAR • AKSARA • BATAK • BERSAMA • BATAKA • BELAJAR •</marquee>
@@ -138,9 +138,6 @@
       </div>
     </div>
 
-    <!-- Explore More -->
-    <button id="sliderBtn" class="arrow-btn">&#10148;</button>
-
     <!-- Modal -->
     <div class="modal fade" id="bookModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -167,22 +164,21 @@
         </div>
       </div>
     </div>
-
   </section>
 
-    <!-- QUIZ SECTION -->
-    <section class="quiz">
-        <div class="quiz-banner">
-            <div class="left-quiz">
-                <h3>Siap Uji Pengetahuanmu?</h3>
-                <h1>Ayo Main Kuis Aksara!</h1>
-                <button class="btn-quiz">Play the Game</button>
-            </div>
-            <div class="right-quiz">
-                <img src="assets/landing/elemen-quiz.png" alt="elemen kuis" id="quiz-img">
-            </div>
-        </div>
-    </section>
+  <!-- QUIZ SECTION -->
+  <section class="quiz" id="quiz">
+    <div class="quiz-banner">
+      <div class="left-quiz">
+        <h3>Siap Uji Pengetahuanmu?</h3>
+        <h1>Ayo Main Kuis Aksara!</h1>
+        <button class="btn-quiz" onclick="window.location.href='quiz.html'">Play the Game</button>
+      </div>
+      <div class="right-quiz">
+        <img src="assets/landing/elemen-quiz.png" alt="elemen kuis" id="quiz-img">
+      </div>
+    </div>
+  </section>
 
     <!-- BLOG SECTION -->
     <section class="blog-section">
@@ -191,29 +187,29 @@
             <p>Buka jendela sejarahmu dengan fitur kami!</p>
         </div>
 
-        <div class="blog-cards">
-            <div class="blog-card" style="--card-bg:#E6DDFE">
-                <div class="blog-img"></div>
-                <h2>Lorem Ipsum dolar sit amet</h2>
-                <p>Lorem Ipsum dolar sit amet consectetur elit.</p>
-                <button class="blog-btn">Read More →</button>
-            </div>
+    <div class="blog-cards">
+      <div class="blog-card" style="--card-bg:#E6DDFE">
+        <img src="assets/blog/blog1.png" alt="blog1" class="blog-img">
+        <h2>Lomba Aksara Batak Terbaru 2025!</h2>
+        <p>Ikuti keseruannya dan Lestarikan Bersama! <br> Dapatkan Hadiah Menarik dan..</p>
+        <button class="blog-btn">Baca Selengkapnya →</button>
+      </div>
 
-            <div class="blog-card" style="--card-bg:#E7EFFF">
-                <div class="blog-img"></div>
-                <h2>Lorem Ipsum dolar sit amet</h2>
-                <p>Lorem Ipsum dolar sit amet consectetur elit.</p>
-                <button class="blog-btn">Read More →</button>
-            </div>
+      <div class="blog-card" style="--card-bg:#E7EFFF">
+        <div class="blog-img"></div>
+        <h2>Lorem Ipsum dolar sit amet</h2>
+        <p>Lorem Ipsum dolar sit amet consectetur elit.</p>
+        <button class="blog-btn">Read More →</button>
+      </div>
 
-            <div class="blog-card" style="--card-bg:#D8F6E2">
-                <div class="blog-img"></div>
-                <h2>Lorem Ipsum dolar sit amet</h2>
-                <p>Lorem Ipsum dolar sit amet consectetur elit.</p>
-                <button class="blog-btn">Read More →</button>
-            </div>
-        </div>
-    </section>
+      <div class="blog-card" style="--card-bg:#D8F6E2">
+        <div class="blog-img"></div>
+        <h2>Lorem Ipsum dolar sit amet</h2>
+        <p>Lorem Ipsum dolar sit amet consectetur elit.</p>
+        <button class="blog-btn">Read More →</button>
+      </div>
+    </div>
+  </section>
 
 
 
@@ -222,12 +218,9 @@
   <section class="feedback">
     <div class="container text-center mt-5">
       <h2 class="judul-bacaan text-hero-bold">
-        <span class="highlight">Remarkable Experiences</span>
+        <span class="highlight">Pengalaman Menakjubkan</span>
       </h2>
     </div>
-
-
-
 
     <!-- FEEDBACK -->
     <div class="container mt-5">
@@ -300,9 +293,8 @@
     </div>
   </section>
 
-
   <!-- REQUEST SECTION -->
-  <section>
+  <section class="request">
     <div class="req-story-section">
       <div class="request-story">
         <h2>KAMU MAU REQUEST CERITA? AI DOPE!</h2>
@@ -315,49 +307,31 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="footer-left">
-      <img src="assets/landing/bataka-logo.png" alt="Bataka Logo" class="footer-logo">
-      <h3>BATAKA</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod sapien vel vehicula viverra.</p>
-      <p>lorem ipsum</p>
-    </div>
-
-    <div class="footer-right">
-      <div class="footer-col">
-        <h2>Home</h2>
-        <p>Home</p>
-        <p>About</p>
-        <p>Feature</p>
-        <p>Game</p>
-      </div>
-
-      <div class="footer-col">
-        <h2>Home</h2>
-        <p>Home</p>
-        <p>About</p>
-        <p>Feature</p>
-        <p>Game</p>
-      </div>
-
-      <div class="footer-col">
-        <h2>Home</h2>
-        <p>Home</p>
-        <p>About</p>
-        <p>Feature</p>
-        <p>Game</p>
-      </div>
-
-      <div class="footer-col social">
-        <h2>Media Social</h2>
-        <div class="social-icons">
-          <img src="assets/ig-icon.png" alt="Instagram">
-          <img src="assets/fb-icon.png" alt="Facebook">
-          <img src="assets/fb-icon.png" alt="Facebook">
+ <!-- FOOTER -->
+    <footer class="footer">
+        <div>
+            <a href="index.html">
+                <img src="assets/landing/footer-logo.png" alt="bataka-logo">
+            </a>
+            <p>Yuk, Kita Hidupkan Kembali Warisan Budaya Luar Biasa Ini, Untuk Terus Menginspirasi Generasi Masa Depan!</p>
         </div>
-      </div>
-    </div>
-  </footer>
+        <div class="nav-footer">
+            <a href="index.html#home">Beranda</a>
+            <a href="index.html#about">Tentang Kami</a>
+            <a href="#">Aksara Batak</a>
+            <a href="#Ragambaca">Ragambaca</a>
+            <a href="#Quiz">Quiz</a>
+        </div>
+
+        <div class="sosmed-footer">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-youtube' ></i></a>
+        </div>
+        <hr>
+        <div>&copy; 2025 Bataka. All Right Reserved.</div>
+    </footer>
+    
 
   <!-- Script Js -->
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
