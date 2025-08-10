@@ -501,8 +501,9 @@ body {
 }
 
 .left-quiz h1 {
-    font-size: 65px;
+    font-size: 90px;
     font-weight: 500;
+    font-family: var(--font-secondary);
     color: var(--white-color);
     line-height: 1.2;
     margin-bottom: 30px;
