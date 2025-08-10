@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/aksara-batak.css" />
+
+    <!-- LINK FONT DM -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="assets/landing/logo-bataka.png"
+      type="image/x-icon"
+    />
+
+  </head>
+
+  <body>
+    <nav class="bataka-navbar">
+      <div class="bataka-nav">
+        <div>
+          <a href="#">Tentang kami</a>
+          <a href="aksara-batak.html">Aksara Batak</a>
+        </div>
+        <div>
+          <img src="assets/landing/bataka-logo.png" alt="bataka-logo" />
+        </div>
+        <div>
+          <a href="#">Ragambaca</a>
+          <a href="#">Quiz</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hamburger" id="hamburger">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+      <a href="#">Tentang</a>
+      <a href="#">Aksara Batak</a>
+      <a href="#">Ragambaca</a>
+      <a href="#">Quiz</a>
+    </div>
+
+    <section class="aksara">
+      <img
+        class="element element-kiri"
+        src="assets/aksara-batak/ranting kiri.png"
+        alt=""
+      />
+      <div>
+        <h1>Aksara Batak</h1>
+        <h4>Jejak Sejarah di Setiap Goresan</h4>
+        <p>
+          Aksara Batak adalah warisan leluhur yang digunakan oleh masyarakat
+          Batak di Sumatra Utara untuk menulis bahasa mereka. Setiap hurufnya
+          menyimpan kisah masa lalu — dari naskah kuno, mantra, hingga surat
+          cinta di zaman lampau.
+        </p>
+      </div>
+      <img
+        class="element element-kanan"
+        src="assets/aksara-batak/ranting kanan.png"
+        alt=""
+      />
+    </section>
+
+    <section class="pad-sec">
+      <img
+        class="element kayu"
+        src="assets/aksara-batak/overlay-kulitKayu.png"
+        alt=""
+      />
+      <img
+        class="element bambu"
+        src="assets/aksara-batak/overlay-bambu.png"
+        alt=""
+      />
+      <img
+        class="element tulang"
+        src="assets/aksara-batak/overlay-tulang.png"
+        alt=""
+      />
+      <div>
+        <h2>Sejarah Singkat</h2>
+        <p>
+          Aksara Batak sudah ada sejak abad ke-19 (atau bahkan sebelumnya),
+          digunakan oleh berbagai sub-etnis Batak seperti Toba, Karo,
+          Mandailing, Simalungun, dan Pakpak. Dulu, tulisan ini ditorehkan di
+          kulit kayu, bambu, atau tulang dengan alat ukir
+        </p>
+      </div>
+    </section>
+
+    <section class="ragam">
+      <div>
+        <h2>Ragam Aksara Batak</h2>
+        <div class="aksara-container" id="aksara-container"></div>
+      </div>
+
+      <img
+        class="element quote-kiri"
+        src="assets/aksara-batak/quote-kiri.svg"
+        alt=""
+      />
+      <img
+        class="element quote-kanan"
+        src="assets/aksara-batak/quote-kanan.svg"
+        alt=""
+      />
+
+
+    </section>
+
+    <section class="quotes">
+      <div>
+        <h3>Adat dohot ugari do Hamoraon di ahu</h3>
+        <p>Adat dan kebiasaanlah kekayaanku</p>
+      </div>
+      <img
+        class="element quote-kiri ijo"
+        src="assets/aksara-batak/ri_double-quotes-l.png"
+        alt=""
+      />
+      <img
+        class="element quote-kanan-ijo"
+        src="assets/aksara-batak/ri_double-quotes-l (1).png"
+        alt=""
+      />
+      <img
+        class="element element-kiri"
+        src="assets/aksara-batak/image 84.png"
+        alt=""
+      />
+      <img
+        class="element element-kanan"
+        src="assets/aksara-batak/image 85.png"
+        alt=""
+      />
+    </section>
+    <script>
+        
+        // Data aksara
+        const aksaraList = [
+            { img: "assets/aksara-batak/aksara-letter/aksara-1.png", baca: "a" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-2.png", baca: "ha" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-3.png", baca: "na" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-4.png", baca: "ra" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-5.png", baca: "ta" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-6.png", baca: "ba" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-7.png", baca: "wa" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-8.png", baca: "i" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-9.png", baca: "ma" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-10.png", baca: "nga" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-11.png", baca: "la" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-12.png", baca: "pa" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-13.png", baca: "sa" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-14.png", baca: "da" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-15.png", baca: "ga" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-17.png", baca: "ja" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-18.png", baca: "ya" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-19.png", baca: "u" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-20.png", baca: "ka" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-21.png", baca: "kha" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-22.png", baca: "ca" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-23.png", baca: "nda" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-24.png", baca: "mba" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-25.png", baca: "fa" },
+            { img: "assets/aksara-batak/aksara-letter/aksara-26.png", baca: "qa" },
+        { img: "assets/aksara-batak/aksara-letter/aksara-27.png", baca: "za" },
+        { img: "assets/aksara-batak/aksara-letter/aksara-16.png", baca: "nya" },
+      ];
+      
+      
+      const container = document.getElementById('aksara-container');
+      
+      aksaraList.forEach((aksara) => {
+          const wrapper = document.createElement('div');
+          wrapper.className = 'aksara-item';
+          
+          const box = document.createElement('div');
+          box.className = 'aksara-box';
+          box.innerHTML = `<img src="${aksara.img}" alt="${aksara.baca}">`;
+          
+          const label = document.createElement('p');
+          label.className = 'aksara-baca';
+          label.textContent = aksara.baca;
+          
+          // bikin audio object
+          const audio = new Audio(`assets/audio/${aksara.baca}.mp3`);
+          
+          // play audio pas hover
+          box.addEventListener('mouseenter', () => {
+              audio.currentTime = 0; // mulai dari awal setiap hover
+              audio.play();
+            });
+            
+            wrapper.appendChild(box);
+            wrapper.appendChild(label);
+            container.appendChild(wrapper);
+        });
+        </script>
+        <script src="js/script.js"></script>
+  </body>
+</html>

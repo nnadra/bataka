@@ -1,3 +1,5 @@
+console.log("✅ Script jalan");
+
 // HAMBURGER MENU TOGGLE
 const hamburger = document.getElementById("hamburger");
 const sidebar = document.getElementById("sidebar");
@@ -38,7 +40,7 @@ window.addEventListener('scroll', () => {
 
   // JUDUL & BUTTON - turun pelan
   document.querySelector('.title').style.transform = `translateY(${scrollY * 0.8}px)`;
-  document.querySelector('.btn-primary').style.transform = `translateY(${scrollY * 0.8}px)`;
+  document.querySelector('.btn-hero').style.transform = `translateY(${scrollY * 0.8}px)`;
 });
 
 //TOGGLE RAGAMBACA
@@ -111,3 +113,4 @@ slider.addEventListener('mousemove', (e) => {
 });
 
 slider.style.cursor = 'grab';
+
