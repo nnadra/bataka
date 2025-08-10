@@ -91,6 +91,7 @@
   </section>
 
   <!-- RAGAMBACA SECTION -->
+<<<<<<< HEAD
   <section id="ragambaca">
     <div class="marquee-container">
       <marquee class="blink"> BELAJAR • AKSARA • BATAK • BERSAMA • BATAKA • BELAJAR • AKSARA • BATAK • BERSAMA •
@@ -106,37 +107,67 @@
             <img src="assets/story/timun-mas.png" alt="timun mas">
           </div>
           <h5 class="fw-bold mb-0 mt-3 w-100 text-center">Timun Mas</h5>
+=======
+ <section>
+  <div class="marquee-container">
+    <marquee class="blink"> BELAJAR • AKSARA • BATAK • BERSAMA • BATAKA • BELAJAR • AKSARA • BATAK • BERSAMA •
+      BATAKA • BELAJAR • AKSARA • BATAK • BERSAMA • BATAKA • BELAJAR •</marquee>
+  </div>
+  <h1 class="judul-bacaan">Pilih Bacaanmu</h1>
+  <!-- CARD -->
+  <div class="carousel-container">
+    <div class="carousel-inner" id="bookSlider">
+      <!-- buku 1 -->
+      <div class="book-div" onclick="openBookModal('timun-mas', 'assets/story/timun-mas.png')">
+        <div class="book-card">
+          <img src="assets/story/timun-mas.png" alt="timun mas">
+>>>>>>> 2aea008 (Save local changes)
         </div>
-        <!-- buku 2 -->
-        <div class="book-div" onclick="openBookModal('Pohon Kacang Ajaib', 'assets/story/bean.png')">
-          <div class="book-card">
-            <img src="assets/story/bean.png" alt="bean">
-          </div>
-          <h5 class="fw-bold mb-0 mt-3 w-100 text-center">Pohon Kacang Ajaib</h5>
+        <h5 class="fw-bold mb-0 mt-3 w-100 text-center">Timun Mas</h5>
+      </div>
+      <!-- buku 2 -->
+      <div class="book-div" onclick="openBookModal('bean', 'assets/story/bean.png')">
+        <div class="book-card">
+          <img src="assets/story/bean.png" alt="bean">
         </div>
-        <!-- buku 3 -->
-        <div class="book-div" onclick="openBookModal('Hansel dan Gretel', 'assets/story/hansel.png')">
-          <div class="book-card">
-            <img src="assets/story/hansel.png" alt="hansel">
-          </div>
-          <h5 class="fw-bold mb-0 mt-3 w-100 text-center">Hansel dan Gretel</h5>
+        <h5 class="fw-bold mb-0 mt-3 w-100 text-center">Pohon Kacang Ajaib</h5>
+      </div>
+      <!-- buku 3 -->
+      <div class="book-div" onclick="openBookModal('hansel', 'assets/story/hansel.png')">
+        <div class="book-card">
+          <img src="assets/story/hansel.png" alt="hansel">
         </div>
-        <!-- buku 4 -->
-        <div class="book-div" onclick="openBookModal('Rubah dan Angggur', 'assets/story/fox.png')">
-          <div class="book-card">
-            <img src="assets/story/fox.png" alt="bean">
-          </div>
-          <h5 class="fw-bold mb-0 mt-3 w-100 text-center">Rubah dan Angggur</h5>
+        <h5 class="fw-bold mb-0 mt-3 w-100 text-center">Hansel dan Gretel</h5>
+      </div>
+      <!-- buku 4 -->
+      <div class="book-div" onclick="openBookModal('fox', 'assets/story/fox.png')">
+        <div class="book-card">
+          <img src="assets/story/fox.png" alt="fox">
         </div>
-        <!-- buku 5(lainnnya) -->
-        <div class="book-div" onclick="openBookModal('3 Babi Kecil', 'assets/story/pigs.png')">
-          <div class="book-card">
-            <img src="assets/story/pigs.png" alt="bean">
-          </div>
-          <h5 class="fw-bold mb-0 mt-3 w-100 text-center">3 Babi Kecil</h5>
+        <h5 class="fw-bold mb-0 mt-3 w-100 text-center">Rubah dan Anggur</h5>
+      </div>
+      <!-- buku 5 -->
+      <div class="book-div" onclick="openBookModal('pigs', 'assets/story/pigs.png')">
+        <div class="book-card">
+          <img src="assets/story/pigs.png" alt="pigs">
         </div>
+        <h5 class="fw-bold mb-0 mt-3 w-100 text-center">3 Babi Kecil</h5>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div id="bookModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close" onclick="closeBookModal()">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <img id="modalImage" src="" alt="cover" style="max-width: 100%; height: auto; margin: 20px 0;">
+    <div style="text-align: center;">
+      <button onclick="goToDetail()" style="padding: 10px 20px; background: #333; color: white; border: none; cursor: pointer;">Baca Selengkapnya</button>
+    </div>
+  </div>
+</div>
 
     <!-- Explore More -->
     <button id="sliderBtn" class="arrow-btn">&#10148;</button>
