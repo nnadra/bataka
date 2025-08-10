@@ -87,13 +87,16 @@ body {
 
 /* BUTTON */
 .btn-kembali {
-  display: inline-block;
+  display: block; 
   padding: 12px 30px;
   background-color: #c0392b;
   color: white;
+  text-align: center;
   text-decoration: none;
   border-radius: 30px;
   font-weight: bold;
+  width: fit-content;
+  margin: 20px auto; 
 }
 
 .btn-kembali:hover {
